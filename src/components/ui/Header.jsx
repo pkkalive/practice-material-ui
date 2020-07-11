@@ -7,9 +7,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import {Home, Settings, History, Info, PermContactCalendar } from '@material-ui/icons';
+import {Home, Settings, History, Info, PermContactCalendar, ExpandMore } from '@material-ui/icons';
 
 import logo from '../../assets/logo.svg';
+import NativeSelect from "@material-ui/core/NativeSelect";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+import Button from "@material-ui/core/Button";
+import Avatar from "@material-ui/core/Avatar";
 
 function ElevationScroll(props) {
     const { children } = props;
@@ -38,6 +42,13 @@ const useStyles = makeStyles(theme => ({
         ...theme.typography.tab,
         minWidth: 10,
         marginLeft: "25px"
+    },
+    button:{
+        border: "none",
+        boxShadow: "none",
+    },
+    avatar: {
+        marginLeft: "5px"
     }
 }));
 
@@ -61,6 +72,13 @@ export default function Header(props) {
                             <Tab className={classes.tab} icon={<Info />} label="ABOUT US" />
                             <Tab className={classes.tab} icon={<PermContactCalendar />} label="CONTACT US" />
                         </Tabs>
+                        <ButtonGroup className={classes.button} variant="contained" color="primary">
+                            <Button>
+                                Hi Kumar
+                                <Avatar className={classes.avatar}></Avatar>
+                                <ExpandMore />
+                            </Button>
+                        </ButtonGroup>
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>
