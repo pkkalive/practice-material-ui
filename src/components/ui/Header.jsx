@@ -1,8 +1,10 @@
 import React from 'react';
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-// import { makeStyles } from '@material-ui/core/styles';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Typography from "@material-ui/core/Typography";
+// import { makeStyles } from '@material-ui/core/styles';
+
 // import Zoom from '@material-ui/core/Zoom';
 // import Fab from '@material-ui/core/Fab';
 // import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
@@ -54,9 +56,11 @@ export default function Header(props) {
     return(
         <React.Fragment>
             <ElevationScroll>
-                <AppBar position="fixed" color="secondary">
+                <AppBar position="fixed" color="primary">
                     <Toolbar>
-                        PK Development
+                        <Typography variant="h3" color="secondary">
+                            PK Development
+                        </Typography>
                     </Toolbar>
                 </AppBar>
                 {/*<Toolbar id="back-to-top-anchor" />*/}
