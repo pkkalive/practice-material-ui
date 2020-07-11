@@ -1,1 +1,1 @@
-This project was build using MAterial UI and React
+This project was build using Material UI and React
