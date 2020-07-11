@@ -54,7 +54,7 @@ export default function Header(props) {
     return(
         <React.Fragment>
             <ElevationScroll>
-                <AppBar position="fixed">
+                <AppBar position="fixed" color="secondary">
                     <Toolbar>
                         PK Development
                     </Toolbar>
