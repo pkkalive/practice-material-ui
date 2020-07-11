@@ -1,24 +1,26 @@
 import React from 'react';
 import { ThemeProvider } from "@material-ui/styles";
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import * as ReactRouter from 'react-router-dom';
 import theme from './ui/Theme';
 import Header from "./ui/Header";
+import SearchBar from "./ui/SearchBar";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <ReactRouter.BrowserRouter>
             <Header />
-            <Switch>
-                <Route exact path ="/" component= {() => <div>HOME</div>}/>
-                <Route exact path ="/services" component= {() => <div>SERVICES</div>}/>
-                <Route exact path ="/revolution" component= {() => <div>THE REVOLUTION</div>}/>
-                <Route exact path ="/about" component= {() => <div>ABOUT US</div>}/>
-                <Route exact path ="/contact" component= {() => <div>CONTACT US</div>}/>
-                <Route exact path ="/profile" component= {() => <div>MY PROFILE</div>}/>
-                <Route exact path ="/logout" component= {() => <div>LOGOUT</div>}/>
-            </Switch>
-        </BrowserRouter>
+            <SearchBar />
+            <ReactRouter.Switch>
+                <ReactRouter.Route exact path ="/" component= {() => <div>HOME</div>}/>
+                <ReactRouter.Route exact path ="/services" component= {() => <div>SERVICES</div>}/>
+                <ReactRouter.Route exact path ="/revolution" component= {() => <div>THE REVOLUTION</div>}/>
+                <ReactRouter.Route exact path ="/about" component= {() => <div>ABOUT US</div>}/>
+                <ReactRouter.Route exact path ="/contact" component= {() => <div>CONTACT US</div>}/>
+                <ReactRouter.Route exact path ="/profile" component= {() => <div>MY PROFILE</div>}/>
+                <ReactRouter.Route exact path ="/logout" component= {() => <div>LOGOUT</div>}/>
+            </ReactRouter.Switch>
+        </ReactRouter.BrowserRouter>
     </ThemeProvider>
   );
 }
